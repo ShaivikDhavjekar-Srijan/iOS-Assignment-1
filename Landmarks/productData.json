@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Apple iPhone 13",
+    "image": "phone1",
+    "price": 69900
+  },
+  {
+    "name": "Apple iPhone 7",
+    "image": "phone2",
+    "price": 25990
+  },
+  {
+    "name": "Apple iPhone 8",
+    "image": "phone3",
+    "price": 35999
+  },
+  {
+    "name": "Apple iPhone 11 Pro Max",
+    "image": "phone4",
+    "price": 117100
+  },
+  {
+    "name": "Redmi 10",
+    "image": "phone5",
+    "price": 13999
+  },
+  {
+    "name": "Apple iPhone 12 Mini",
+    "image": "phone6",
+    "price": 55359
+  },
+  {
+    "name": "Apple iPhone 5c",
+    "image": "phone7",
+    "price": 4999
+  },
+  {
+    "name": "Appple iPhone 14",
+    "image": "phone8",
+    "price": 79900
+  }
+]
