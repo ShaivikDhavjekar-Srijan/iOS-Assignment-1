@@ -1,0 +1,31 @@
+LogiInView
+//                Image("Landmarks-Background").ignoresSafeArea().scaledToFit()
+//                //Color(.green).ignoresSafeArea()
+//                ZStack{
+//                    RoundedRectangle(cornerRadius: 100).scale(0.9).foregroundColor(.white.opacity(0.3))
+//                }.frame(width: 400, height: 700)
+
+//                ZStack {
+//                    Image("Landmarks-Background")
+//                }.frame(width: 100, height:500)
+//                RoundedRectangle(cornerRadius: 100).scale(0.9).foregroundColor(.white)
+//                RoundedRectangle(cornerRadius: 100).stroke().scale(0.899).foregroundColor(.black)
+
+//     @State private var showingAlert = false
+//                    .alert(isPresented: $showingAlert) { //$ turns it into a binding boolean
+//                        Alert(title: Text("You have logged in as "+userName), dismissButton: .default(Text("OK")) {
+//                            withAnimation {
+//                                loggedIn = true
+//                            }
+//                        })
+//
+//                    }
+
+//                if loggedIn {
+//                    ContentView()
+//                }
+
+//                let productList = ProductDataLoader().productData
+//                print(productList)
+//                showingAlert = true
+

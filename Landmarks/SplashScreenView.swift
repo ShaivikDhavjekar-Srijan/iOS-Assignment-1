@@ -17,14 +17,17 @@ struct SplashScreenView: View {
             LogInView()
         } else {
             ZStack {
-                Color.blue.ignoresSafeArea()
-                Image("Shaivik")
-                    .opacity(opacity)
-                    .onAppear {
-                        withAnimation(.easeIn(duration: 1.2)) {
-                            self.opacity = 1.0
-                        }
+                Color.green.ignoresSafeArea()
+                VStack {
+                    Image("Landmarks-Logo-Splash-Screen")
+                        .resizable()
+                        .opacity(opacity)
+                        .onAppear {
+                            withAnimation(.easeIn(duration: 1.5)) {
+                                self.opacity = 1.0
+                            }
                     }
+                }.frame(width: 400, height: 400)
             }.onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation{

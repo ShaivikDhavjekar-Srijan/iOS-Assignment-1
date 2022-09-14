@@ -13,5 +13,5 @@ struct ProductData: Codable {
     var price : Int
 }
 
-let productList = ProductDataLoader().productData
+//let productList = ProductDataLoader().productData
 //print(productList)
