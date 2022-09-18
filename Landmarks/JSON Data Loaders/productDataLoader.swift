@@ -9,7 +9,8 @@ import Foundation
 
 public class ProductDataLoader {
     @Published var productData = [ProductData]()
-    
+    //use $ to access publisher
+    //if there is a change in variable, any view using publisher will be reinvoked with the updated value
     //when you call ProductDataLoader you immediately load the data
     init() {
         load()
@@ -25,10 +26,9 @@ public class ProductDataLoader {
                 let data = try Data(contentsOf: fileLocation)
                 //decoding json
                 //JSONDecoder allows to decode instances of a dat type from json object
-                let jsonDecoder = JSONDecoder()
                 //get data from json file using jsonDecoder
                 //decoding array of ProductData
-                let dataFromJson = try jsonDecoder.decode([ProductData].self, from: data)
+                let dataFromJson = try JSONDecoder().decode([ProductData].self, from: data)
                 self.productData = dataFromJson
                 
             } catch {

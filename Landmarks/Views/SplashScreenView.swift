@@ -9,6 +9,10 @@ import SwiftUI
 
 struct SplashScreenView: View {
     
+    //@State is used to modify values inside a struct which is not usually allowed
+    //State variables are stored in shared storage managed by SwiftUI
+    //SwiftUI can recreate and destroy the structs without losing the state
+    //RECOMMENDED TO BE PRIVATE
     @State private var isActive = false
     @State private var opacity = 0.0
     

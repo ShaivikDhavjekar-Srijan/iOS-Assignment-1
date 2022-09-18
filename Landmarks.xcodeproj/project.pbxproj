@@ -69,14 +69,12 @@
 		AF263EF028CF4657005E4578 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
+				AFBB1DA528D4976C006F2141 /* Views */,
+				AFBB1D9E28D31369006F2141 /* Models */,
 				AFBB1D9D28D1DBD6006F2141 /* JSON Data Loaders */,
 				AFBB1D9428D0E7F8006F2141 /* JSON Files */,
 				AF263EF128CF4657005E4578 /* LandmarksApp.swift */,
-				AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */,
-				AF35F16528CFBFA800ADD559 /* LogInView.swift */,
-				AF263EF328CF4657005E4578 /* ContentView.swift */,
 				AFBB1D8C28D08896006F2141 /* ProductCard.swift */,
-				AFBB1D9028D09594006F2141 /* productData.swift */,
 				AF263EF528CF4658005E4578 /* Assets.xcassets */,
 				AF263EF728CF4658005E4578 /* Preview Content */,
 				AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */,
@@ -108,6 +106,24 @@
 				AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */,
 			);
 			path = "JSON Data Loaders";
+			sourceTree = "<group>";
+		};
+		AFBB1D9E28D31369006F2141 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFBB1D9028D09594006F2141 /* productData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AFBB1DA528D4976C006F2141 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */,
+				AF35F16528CFBFA800ADD559 /* LogInView.swift */,
+				AF263EF328CF4657005E4578 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
