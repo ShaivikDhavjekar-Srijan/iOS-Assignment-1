@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct ProductCard: View {
-    var product: ProductData
+    var product: StoreElement
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image(product.image)
-                .resizable()
-                .cornerRadius(20)
-                .frame(width: 180)
-                .scaledToFit()
-
+            Color.white
+            AsyncImage(url: URL(string: product.image)) {
+                image in image.resizable()
+            } placeholder: {
+            ProgressView()
+            }
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 178.2178, height: 247.5248)
+            
             VStack(alignment: .leading) {
-                Text(product.name).bold()
-
-                Text("₹\(product.price)")
+                Text(product.title).bold()
+                Text("$"+(String(format:"%.02f", product.price)))
                     .font(.caption)
             }
             .padding()
-            .frame(width: 180, alignment: .leading)
-            .background(.white.opacity(0.55))
-            .cornerRadius(20)
+            .frame(width: 180, height:50 ,alignment: .leading)
+            .background(.ultraThinMaterial)
         }
         .frame(width:180, height: 250)
-        .shadow(radius:3)
-
+        .border(.black.opacity(0.1), width: 1)
     }
 }
-
-struct ProductCard_Previews: PreviewProvider {
-    static var previews: some View {
-        ProductCard(product: productList[0])
-    }
-}
+//
+//struct ProductCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProductCard(product: storeResults[0])
+//    }
+//}

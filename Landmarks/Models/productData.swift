@@ -7,11 +7,31 @@
 
 import Foundation
 
-struct ProductData: Codable {
-    var name : String
-    var image : String
-    var price : Int
+struct StoreElement: Codable {
+    let id: Int
+    let title: String
+    let price: Double
+    let storeDescription: String
+    let category: Category
+    let image: String
+    let rating: Rating
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, price
+        case storeDescription = "description"
+        case category, image, rating
+    }
 }
 
-//let productList = ProductDataLoader().productData
-//print(productList)
+enum Category: String, Codable {
+    case electronics = "electronics"
+    case jewelery = "jewelery"
+    case menSClothing = "men's clothing"
+    case womenSClothing = "women's clothing"
+}
+
+// MARK: - Rating
+struct Rating: Codable {
+    let rate: Double
+    let count: Int
+}

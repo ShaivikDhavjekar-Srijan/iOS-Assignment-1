@@ -28,7 +28,7 @@ struct LogInView: View {
     var body: some View {
             NavigationView {
                 if isLoggedIn {
-                    NavigationLink(destination:ContentView().navigationBarBackButtonHidden(true), isActive: $isLoggedIn) {}
+                    NavigationLink(destination:StoreView().navigationBarBackButtonHidden(true), isActive: $isLoggedIn) {}
                 } else {
                         ZStack{
 
@@ -63,7 +63,7 @@ struct LogInView: View {
                             .cornerRadius(100)
                             .padding()
 
-                            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true), isActive: $loggedIn) {
+                            NavigationLink(destination: StoreView().navigationBarBackButtonHidden(true), isActive: $loggedIn) {
                             }
                             
                         }
