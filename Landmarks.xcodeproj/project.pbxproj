@@ -14,11 +14,12 @@
 		AF35F16628CFBFA800ADD559 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F16528CFBFA800ADD559 /* LogInView.swift */; };
 		AFBB1D8B28D07B9A006F2141 /* loginData.json in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D8A28D07B9A006F2141 /* loginData.json */; };
 		AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D8C28D08896006F2141 /* ProductCard.swift */; };
-		AFBB1D9128D09594006F2141 /* productData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9028D09594006F2141 /* productData.swift */; };
-		AFBB1D9328D0970F006F2141 /* productDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9228D0970F006F2141 /* productDataLoader.swift */; };
-		AFBB1D9828D0E91B006F2141 /* userDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */; };
+		AFBB1D9128D09594006F2141 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9028D09594006F2141 /* StoreModel.swift */; };
+		AFBB1D9828D0E91B006F2141 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9728D0E91B006F2141 /* LogInViewModel.swift */; };
 		AFBB1D9C28D1C681006F2141 /* RedactedCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */; };
 		AFBB1DA728D7666B006F2141 /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1DA628D7666B006F2141 /* StoreView.swift */; };
+		AFCCD7C328D8EA7200819BE6 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCCD7C228D8EA7200819BE6 /* LogInModel.swift */; };
+		AFCCD7C528D8EB6A00819BE6 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCCD7C428D8EB6A00819BE6 /* StoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,11 +31,12 @@
 		AF35F16528CFBFA800ADD559 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		AFBB1D8A28D07B9A006F2141 /* loginData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginData.json; sourceTree = "<group>"; };
 		AFBB1D8C28D08896006F2141 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
-		AFBB1D9028D09594006F2141 /* productData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productData.swift; sourceTree = "<group>"; };
-		AFBB1D9228D0970F006F2141 /* productDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productDataLoader.swift; sourceTree = "<group>"; };
-		AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataLoader.swift; sourceTree = "<group>"; };
+		AFBB1D9028D09594006F2141 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		AFBB1D9728D0E91B006F2141 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = RedactedCode.txt; sourceTree = "<group>"; };
 		AFBB1DA628D7666B006F2141 /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		AFCCD7C228D8EA7200819BE6 /* LogInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
+		AFCCD7C428D8EB6A00819BE6 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +71,9 @@
 			children = (
 				AFBB1DA528D4976C006F2141 /* Views */,
 				AFBB1D9E28D31369006F2141 /* Models */,
-				AFBB1D9D28D1DBD6006F2141 /* JSON Data Loaders */,
+				AFBB1D9D28D1DBD6006F2141 /* View Models */,
 				AFBB1D9428D0E7F8006F2141 /* JSON Files */,
 				AF263EF128CF4657005E4578 /* LandmarksApp.swift */,
-				AFBB1D8C28D08896006F2141 /* ProductCard.swift */,
 				AF263EF528CF4658005E4578 /* Assets.xcassets */,
 				AF263EF728CF4658005E4578 /* Preview Content */,
 				AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */,
@@ -96,19 +97,20 @@
 			path = "JSON Files";
 			sourceTree = "<group>";
 		};
-		AFBB1D9D28D1DBD6006F2141 /* JSON Data Loaders */ = {
+		AFBB1D9D28D1DBD6006F2141 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFBB1D9228D0970F006F2141 /* productDataLoader.swift */,
-				AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */,
+				AFBB1D9728D0E91B006F2141 /* LogInViewModel.swift */,
+				AFCCD7C428D8EB6A00819BE6 /* StoreViewModel.swift */,
 			);
-			path = "JSON Data Loaders";
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		AFBB1D9E28D31369006F2141 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFBB1D9028D09594006F2141 /* productData.swift */,
+				AFBB1D9028D09594006F2141 /* StoreModel.swift */,
+				AFCCD7C228D8EA7200819BE6 /* LogInModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +121,7 @@
 				AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */,
 				AF35F16528CFBFA800ADD559 /* LogInView.swift */,
 				AFBB1DA628D7666B006F2141 /* StoreView.swift */,
+				AFBB1D8C28D08896006F2141 /* ProductCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,13 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF263EF228CF4657005E4578 /* LandmarksApp.swift in Sources */,
-				AFBB1D9328D0970F006F2141 /* productDataLoader.swift in Sources */,
+				AFCCD7C328D8EA7200819BE6 /* LogInModel.swift in Sources */,
 				AF35F16628CFBFA800ADD559 /* LogInView.swift in Sources */,
-				AFBB1D9128D09594006F2141 /* productData.swift in Sources */,
+				AFBB1D9128D09594006F2141 /* StoreModel.swift in Sources */,
 				AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */,
 				AF263F0028CF4F77005E4578 /* SplashScreenView.swift in Sources */,
 				AFBB1DA728D7666B006F2141 /* StoreView.swift in Sources */,
-				AFBB1D9828D0E91B006F2141 /* userDataLoader.swift in Sources */,
+				AFCCD7C528D8EB6A00819BE6 /* StoreViewModel.swift in Sources */,
+				AFBB1D9828D0E91B006F2141 /* LogInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

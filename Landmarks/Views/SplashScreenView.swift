@@ -30,7 +30,7 @@ struct SplashScreenView: View {
                             withAnimation(.easeIn(duration: 1.5)) {
                                 self.opacity = 1.0
                             }
-                    }
+                        }
                 }.frame(width: 400, height: 400)
             }.onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {

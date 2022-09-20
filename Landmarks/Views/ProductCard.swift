@@ -15,13 +15,15 @@ struct ProductCard: View {
             AsyncImage(url: URL(string: product.image)) {
                 image in image.resizable()
             } placeholder: {
-            ProgressView()
+                ProgressView()
             }
             .aspectRatio(contentMode: .fit)
             .frame(width: 178.2178, height: 247.5248)
             
             VStack(alignment: .leading) {
-                Text(product.title).bold()
+                NavigationLink(destination: Text("\(product.id)")) {
+                    Text(product.title).bold().foregroundColor(.black)
+                }
                 Text("$"+(String(format:"%.02f", product.price)))
                     .font(.caption)
             }
