@@ -16,12 +16,12 @@ struct LogInView: View {
     @StateObject private var settings = UserSettings()
     
     var body: some View {
+
         NavigationView {
             if settings.isLoggedIn {
                 NavigationLink(destination:StoreView(), isActive: $settings.isLoggedIn) {}
             } else {
                 ZStack{
-                    
                     Color.green.ignoresSafeArea()
                     VStack{
                         Text("Log In")
@@ -44,18 +44,16 @@ struct LogInView: View {
                             .background(Color.black.opacity(0.1))
                             .border(.red, width: CGFloat(auth.wrongPassword))
                         
-                        Button("Log In") {
+                        Button{
                             auth.authenticateUser(username: userName, password: password)
+                        } label: {
+                            Text("Log In")
+                                .foregroundColor(.white)
+                                .frame(width: 300, height: 50)
+                                .background(.green)
+                                .cornerRadius(100)
+                                .padding()
                         }
-                        .foregroundColor(.white)
-                        .frame(width: 300, height: 50)
-                        .background(.green)
-                        .cornerRadius(100)
-                        .padding()
-                        
-                        NavigationLink(destination: StoreView(), isActive: $auth.loggedIn) {
-                        }
-                        
                     }
                     .frame(width: 360, height: 700)
                     .background(.white)

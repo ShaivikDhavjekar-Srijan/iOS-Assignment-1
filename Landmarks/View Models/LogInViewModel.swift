@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class UserDataLoader {
+final class UserDataLoader {
     @Published var userData = [UserData]()
     //use $ to access publisher
     //if there is a change in variable, any view using publisher will be reinvoked with the updated value
@@ -39,20 +39,18 @@ public class UserDataLoader {
     }
 }
 
-public class AuthenticateUser: ObservableObject {
+final class AuthenticateUser: ObservableObject {
     
     let loginData = UserDataLoader().userData
     
     @Published var wrongUserName = 0
     @Published var wrongPassword = 0
-    @Published var loggedIn = false
     
     func authenticateUser(username: String, password: String) {
         if username == loginData[0].username {
             wrongUserName = 0
             if password == loginData[0].password {
                 wrongPassword = 0
-                loggedIn = true
                 UserDefaults.standard.set(true,forKey: "LOG_IN_KEY")
             } else {
                 wrongPassword = 3

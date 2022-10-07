@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ProductDataLoader: ObservableObject {
+final class ProductDataLoader: ObservableObject {
     @Published var storeData = [StoreElement]()
     
     //    init() {}

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 struct UserData: Codable {
     var username: String
@@ -13,5 +14,12 @@ struct UserData: Codable {
 }
 
 final class UserSettings: ObservableObject {
-    @Published var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "LOG_IN_KEY")
+    let trigger = PassthroughSubject<Void, Never>()
+    
+    @UserDefaultsWrapper("LOG_IN_KEY",deafultValue:false)
+    var isLoggedIn:Bool{
+        willSet{
+            trigger.send()
+        }
+    }
 }
