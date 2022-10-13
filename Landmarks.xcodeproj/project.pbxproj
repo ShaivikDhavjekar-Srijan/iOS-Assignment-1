@@ -12,6 +12,7 @@
 		AF263EF928CF4658005E4578 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF263EF828CF4658005E4578 /* Preview Assets.xcassets */; };
 		AF263F0028CF4F77005E4578 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */; };
 		AF35F16628CFBFA800ADD559 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F16528CFBFA800ADD559 /* LogInView.swift */; };
+		AF3BE31428F8724D00EF4373 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BE31328F8724D00EF4373 /* ProductView.swift */; };
 		AFABD9E128EEC2B70002A278 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFABD9E028EEC2B70002A278 /* UserDefaultsWrapper.swift */; };
 		AFBB1D8B28D07B9A006F2141 /* loginData.json in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D8A28D07B9A006F2141 /* loginData.json */; };
 		AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D8C28D08896006F2141 /* ProductCard.swift */; };
@@ -30,6 +31,7 @@
 		AF263EF828CF4658005E4578 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AF35F16528CFBFA800ADD559 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		AF3BE31328F8724D00EF4373 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		AFABD9E028EEC2B70002A278 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapper.swift; sourceTree = "<group>"; };
 		AFBB1D8A28D07B9A006F2141 /* loginData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginData.json; sourceTree = "<group>"; };
 		AFBB1D8C28D08896006F2141 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				AF35F16528CFBFA800ADD559 /* LogInView.swift */,
 				AFBB1DA628D7666B006F2141 /* StoreView.swift */,
 				AFBB1D8C28D08896006F2141 /* ProductCard.swift */,
+				AF3BE31328F8724D00EF4373 /* ProductView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */,
 				AF263F0028CF4F77005E4578 /* SplashScreenView.swift in Sources */,
 				AFABD9E128EEC2B70002A278 /* UserDefaultsWrapper.swift in Sources */,
+				AF3BE31428F8724D00EF4373 /* ProductView.swift in Sources */,
 				AFBB1DA728D7666B006F2141 /* StoreView.swift in Sources */,
 				AFCCD7C528D8EB6A00819BE6 /* StoreViewModel.swift in Sources */,
 				AFBB1D9828D0E91B006F2141 /* LogInViewModel.swift in Sources */,

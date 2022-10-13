@@ -21,7 +21,7 @@ struct ProductCard: View {
             .frame(width: 178.2178, height: 247.5248)
             
             VStack(alignment: .leading) {
-                NavigationLink(destination: Text("\(product.id)")) {
+                NavigationLink(destination: ProductView(product: product)) {
                     Text(product.title).bold().foregroundColor(.black)
                 }
                 Text("$"+(String(format:"%.02f", product.price)))
@@ -35,9 +35,9 @@ struct ProductCard: View {
         .border(.black.opacity(0.1), width: 1)
     }
 }
-//
+
 //struct ProductCard_Previews: PreviewProvider {
 //    static var previews: some View {
-//        ProductCard(product: storeResults[0])
+//        ProductCard(product: model.storeData[0])
 //    }
 //}
