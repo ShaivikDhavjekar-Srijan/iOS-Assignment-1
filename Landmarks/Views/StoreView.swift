@@ -9,8 +9,8 @@ import SwiftUI
 
 struct StoreView: View {
     //@StateObject used for creating class the first time
-    @StateObject var storeResults = ProductDataLoader()
-    @ObservedObject private var settings = UserSettings()
+    @StateObject var model = StoreViewModel()
+//    @ObservedObject private var settings = UserSettings()
     
     var columns = [GridItem(.adaptive(minimum: 160),spacing: 20)]
     
@@ -38,7 +38,7 @@ struct StoreView: View {
         
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(storeResults.storeData, id: \.id) {product in ProductCard(product: product)
+                ForEach(model.storeData, id: \.id) {product in ProductCard(product: product)
                 }
             }
             .padding()
@@ -56,7 +56,7 @@ struct StoreView: View {
             //            }
         }
         .task {
-            await storeResults.loadData()
+            await model.loadProductData()
         }
     }
 }

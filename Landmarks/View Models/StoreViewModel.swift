@@ -7,12 +7,12 @@
 
 import Foundation
 
-final class ProductDataLoader: ObservableObject {
+class StoreViewModel: ObservableObject {
     @Published var storeData = [StoreElement]()
     
     //    init() {}
     
-    func loadData() async {
+    func loadProductData() async {
         guard let storeUrl = URL(string: "https://fakestoreapi.com/products") else {
             print("Invalid URL")
             return
@@ -23,7 +23,7 @@ final class ProductDataLoader: ObservableObject {
             print("Data Fetched")
             
             if let decodedResponse = try? JSONDecoder().decode([StoreElement].self, from: data) {
-                storeData = decodedResponse
+                await assignStoreData(decodedResponse: decodedResponse)
             }
         } catch {
             print("Invalid data")
@@ -32,5 +32,9 @@ final class ProductDataLoader: ObservableObject {
     
     func sort() {
         self.storeData = self.storeData.sorted(by: {$0.id < $1.id})
+    }
+    
+    @MainActor private func assignStoreData(decodedResponse: [StoreElement]) {
+        self.storeData = decodedResponse
     }
 }

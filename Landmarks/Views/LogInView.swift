@@ -12,7 +12,7 @@ struct LogInView: View {
     @State private var userName = ""
     @State private var password = ""
     
-    @StateObject var auth = AuthenticateUser()
+    @StateObject var model = LogInViewModel()
     @StateObject private var settings = UserSettings()
     
     var body: some View {
@@ -35,17 +35,17 @@ struct LogInView: View {
                             .frame(width: 300, height: 50)
                             .cornerRadius(10)
                             .background(Color.black.opacity(0.1))
-                            .border(.red, width: CGFloat(auth.wrongUserName))
+                            .border(.red, width: CGFloat(model.wrongUserName))
                         
                         SecureField("Password", text:$password)
                             .padding()
                             .frame(width: 300, height: 50)
                             .cornerRadius(10)
                             .background(Color.black.opacity(0.1))
-                            .border(.red, width: CGFloat(auth.wrongPassword))
+                            .border(.red, width: CGFloat(model.wrongPassword))
                         
                         Button{
-                            auth.authenticateUser(username: userName, password: password)
+                            model.authenticateUser(username: userName, password: password)
                         } label: {
                             Text("Log In")
                                 .foregroundColor(.white)

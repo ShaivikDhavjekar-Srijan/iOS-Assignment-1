@@ -7,17 +7,20 @@
 
 import Foundation
 
-final class UserDataLoader {
+class LogInViewModel: ObservableObject {
     @Published var userData = [UserData]()
     //use $ to access publisher
     //if there is a change in variable, any view using publisher will be reinvoked with the updated value
     //when you call UserDataLoader you immediately load the data
     
+    @Published private(set) var wrongUserName: Int = 0
+    @Published private(set) var wrongPassword: Int = 0
+    
     init() {
-        load()
+        loadUserData()
     }
     
-    func load() {
+    func loadUserData() {
         if let fileLocation = Bundle.main.url(forResource: "loginData", withExtension:"json") {
             //do catch for errors
             do {
@@ -37,19 +40,11 @@ final class UserDataLoader {
             }
         }
     }
-}
-
-final class AuthenticateUser: ObservableObject {
-    
-    let loginData = UserDataLoader().userData
-    
-    @Published var wrongUserName = 0
-    @Published var wrongPassword = 0
     
     func authenticateUser(username: String, password: String) {
-        if username == loginData[0].username {
+        if username == userData[0].username {
             wrongUserName = 0
-            if password == loginData[0].password {
+            if password == userData[0].password {
                 wrongPassword = 0
                 UserDefaults.standard.set(true,forKey: "LOG_IN_KEY")
             } else {
