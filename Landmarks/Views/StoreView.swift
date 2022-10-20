@@ -12,51 +12,62 @@ struct StoreView: View {
     @StateObject var model = StoreViewModel()
 //    @ObservedObject private var settings = UserSettings()
     
+    @State var isList: Bool = false
+    
     var columns = [GridItem(.adaptive(minimum: 160),spacing: 20)]
     
     var body: some View {
-        //        List(storeResults, id: \.id) { product in
-        //            HStack(alignment: .top) {
-        //                AsyncImage(url: URL(string: product.image)) {
-        //                    image in image.resizable()
-        //                } placeholder: {
-        //                ProgressView()
-        //
-        //                }
-        //                .frame(width:104, height: 150)
-        //                VStack(alignment: .leading) {
-        //                    Text(product.title)
-        //                        .font(.headline)
-        //                    Text("$\(product.price)")
-        //                }
-        //            }
-        //        }
-        //        .task {
-        //            await loadData()
-        //        }
-        //        .navigationTitle("FakeStore")
+                
         
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(model.storeData, id: \.id) {product in ProductCard(product: product)
+        NavigationView {
+            ZStack{
+                if isList {
+                    List(model.storeData, id: \.id) { product in
+                        HStack(alignment: .top) {
+                            AsyncImage(url: URL(string: product.image)) {
+                                image in image.resizable()
+                            } placeholder: {
+                            ProgressView()
+            
+                            }
+                            .frame(width:104, height: 150)
+                            VStack(alignment: .leading) {
+                                Text(product.title)
+                                    .font(.headline)
+                                Text("$\(product.price)")
+                            }
+                        }
+                    }
+                    
+                } else {
+                    ScrollView {
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(model.storeData, id: \.id) {product in ProductCard(product: product)
+                            }
+                        }
+                        .padding()
+                    }
                 }
             }
-            .padding()
+            .task {
+                await model.loadProductData()
+            }
             .navigationTitle("FakeStore")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
-            //            .toolbar {
-            //                ToolbarItem(placement: .navigationBarTrailing)
-            //                {
-            //                    Button("Log Out") {
-            //                        UserDefaults.standard.set(false,forKey: "LOG_IN_KEY")
-            //                    }
-            //                    .foregroundColor(.red)
-            //                }
-            //            }
-        }
-        .task {
-            await model.loadProductData()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing)
+                {
+//                    Button("Log Out") {
+//                        UserDefaults.standard.set(false,forKey: "LOG_IN_KEY")
+//                    }
+//                    .foregroundColor(.red)
+                    Button {
+                        isList.toggle()
+                    } label: {
+                        Text("ViewStyle")
+                    }
+                }
+            }
+            
         }
     }
 }

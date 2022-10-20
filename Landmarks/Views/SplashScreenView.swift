@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SplashScreenView: View {
     
+    @StateObject private var settings = UserSettings()
+    
     //@State is used to modify values inside a struct which is not usually allowed
     //State variables are stored in shared storage managed by SwiftUI
     //SwiftUI can recreate and destroy the structs without losing the state
@@ -18,7 +20,11 @@ struct SplashScreenView: View {
     
     var body: some View {
         if isActive {
-            LogInView()
+            if settings.isLoggedIn {
+                StoreView()
+            } else {
+                LogInView()
+            }
         } else {
             ZStack {
                 Color.green.ignoresSafeArea()

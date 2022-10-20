@@ -16,11 +16,10 @@ struct LogInView: View {
     @StateObject private var settings = UserSettings()
     
     var body: some View {
-
-        NavigationView {
-            if settings.isLoggedIn {
-                NavigationLink(destination:StoreView(), isActive: $settings.isLoggedIn) {}
-            } else {
+        if settings.isLoggedIn {
+            StoreView()
+        } else {
+            NavigationView {
                 ZStack{
                     Color.green.ignoresSafeArea()
                     VStack{
@@ -63,6 +62,8 @@ struct LogInView: View {
                 .navigationBarHidden(true)
             }
         }
+
+        
     }
 }
 

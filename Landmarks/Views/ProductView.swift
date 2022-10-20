@@ -16,7 +16,7 @@ struct ProductView: View {
     var product: StoreElement
     var body: some View {
         VStack(spacing: 0) {
-            ScrollView(.vertical) {
+            ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack(alignment: .leading){
                     AsyncImage(url: URL(string: product.image)) {
                         image in image.resizable()
