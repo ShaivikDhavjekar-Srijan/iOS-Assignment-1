@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		AF263EF228CF4657005E4578 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF263EF128CF4657005E4578 /* LandmarksApp.swift */; };
-		AF263EF428CF4657005E4578 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF263EF328CF4657005E4578 /* ContentView.swift */; };
 		AF263EF628CF4658005E4578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF263EF528CF4658005E4578 /* Assets.xcassets */; };
 		AF263EF928CF4658005E4578 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF263EF828CF4658005E4578 /* Preview Assets.xcassets */; };
 		AF263F0028CF4F77005E4578 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */; };
 		AF35F16628CFBFA800ADD559 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF35F16528CFBFA800ADD559 /* LogInView.swift */; };
+		AF8F4CEF29019DD000B45915 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F4CEE29019DD000B45915 /* ContentView.swift */; };
 		AFBB1D8B28D07B9A006F2141 /* loginData.json in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D8A28D07B9A006F2141 /* loginData.json */; };
 		AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D8C28D08896006F2141 /* ProductCard.swift */; };
 		AFBB1D9128D09594006F2141 /* productData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9028D09594006F2141 /* productData.swift */; };
@@ -25,11 +25,11 @@
 /* Begin PBXFileReference section */
 		AF263EEE28CF4657005E4578 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF263EF128CF4657005E4578 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
-		AF263EF328CF4657005E4578 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF263EF528CF4658005E4578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF263EF828CF4658005E4578 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AF35F16528CFBFA800ADD559 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		AF8F4CEE29019DD000B45915 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AFBB1D8A28D07B9A006F2141 /* loginData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginData.json; sourceTree = "<group>"; };
 		AFBB1D8C28D08896006F2141 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		AFBB1D9028D09594006F2141 /* productData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productData.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			children = (
 				AF263EFF28CF4F77005E4578 /* SplashScreenView.swift */,
 				AF35F16528CFBFA800ADD559 /* LogInView.swift */,
-				AF263EF328CF4657005E4578 /* ContentView.swift */,
+				AF8F4CEE29019DD000B45915 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,9 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF263EF428CF4657005E4578 /* ContentView.swift in Sources */,
 				AF263EF228CF4657005E4578 /* LandmarksApp.swift in Sources */,
 				AFBB1D9328D0970F006F2141 /* productDataLoader.swift in Sources */,
+				AF8F4CEF29019DD000B45915 /* ContentView.swift in Sources */,
 				AF35F16628CFBFA800ADD559 /* LogInView.swift in Sources */,
 				AFBB1D9128D09594006F2141 /* productData.swift in Sources */,
 				AFBB1D8D28D08896006F2141 /* ProductCard.swift in Sources */,
