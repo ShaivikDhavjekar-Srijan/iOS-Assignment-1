@@ -69,14 +69,14 @@ struct StoreView: View {
             }
             
         }
-        .flipsForRightToLeftLayoutDirection(true)
+//        .flipsForRightToLeftLayoutDirection(true)
     }
 }
 
 struct StoreView_Previews: PreviewProvider {
     static var previews: some View {
         StoreView()
-        StoreView()
-            .environment(\.locale, .init(identifier: "ar"))
+//        StoreView()
+//            .environment(\.locale, .init(identifier: "ar"))
     }
 }
