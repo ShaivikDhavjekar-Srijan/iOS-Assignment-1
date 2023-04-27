@@ -20,7 +20,18 @@
 		AFBB1D9828D0E91B006F2141 /* userDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */; };
 		AFBB1D9A28D106C0006F2141 /* productData.json in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D9928D106C0006F2141 /* productData.json */; };
 		AFBB1D9C28D1C681006F2141 /* RedactedCode.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */; };
+		AFF797BC29FA408E00AEB646 /* LandmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF797BB29FA408E00AEB646 /* LandmarksTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFF797BD29FA408E00AEB646 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF263EE628CF4657005E4578 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF263EED28CF4657005E4578;
+			remoteInfo = Landmarks;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF263EEE28CF4657005E4578 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,10 +48,19 @@
 		AFBB1D9728D0E91B006F2141 /* userDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataLoader.swift; sourceTree = "<group>"; };
 		AFBB1D9928D106C0006F2141 /* productData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = productData.json; sourceTree = "<group>"; };
 		AFBB1D9B28D1C681006F2141 /* RedactedCode.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = RedactedCode.txt; sourceTree = "<group>"; };
+		AFF797B929FA408E00AEB646 /* LandmarksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LandmarksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF797BB29FA408E00AEB646 /* LandmarksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF263EEB28CF4657005E4578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF797B629FA408E00AEB646 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				AF263EF028CF4657005E4578 /* Landmarks */,
+				AFF797BA29FA408E00AEB646 /* LandmarksTests */,
 				AF263EEF28CF4657005E4578 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AF263EEE28CF4657005E4578 /* Landmarks.app */,
+				AFF797B929FA408E00AEB646 /* LandmarksTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +148,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AFF797BA29FA408E00AEB646 /* LandmarksTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFF797BB29FA408E00AEB646 /* LandmarksTests.swift */,
+			);
+			path = LandmarksTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +176,24 @@
 			productReference = AF263EEE28CF4657005E4578 /* Landmarks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AFF797B829FA408E00AEB646 /* LandmarksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFF797C129FA408E00AEB646 /* Build configuration list for PBXNativeTarget "LandmarksTests" */;
+			buildPhases = (
+				AFF797B529FA408E00AEB646 /* Sources */,
+				AFF797B629FA408E00AEB646 /* Frameworks */,
+				AFF797B729FA408E00AEB646 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFF797BE29FA408E00AEB646 /* PBXTargetDependency */,
+			);
+			name = LandmarksTests;
+			productName = LandmarksTests;
+			productReference = AFF797B929FA408E00AEB646 /* LandmarksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,11 +201,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					AF263EED28CF4657005E4578 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					AFF797B829FA408E00AEB646 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AF263EED28CF4657005E4578;
 					};
 				};
 			};
@@ -175,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				AF263EED28CF4657005E4578 /* Landmarks */,
+				AFF797B829FA408E00AEB646 /* LandmarksTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +242,13 @@
 				AFBB1D9A28D106C0006F2141 /* productData.json in Resources */,
 				AF263EF628CF4658005E4578 /* Assets.xcassets in Resources */,
 				AFBB1D9C28D1C681006F2141 /* RedactedCode.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFF797B729FA408E00AEB646 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +270,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFF797B529FA408E00AEB646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF797BC29FA408E00AEB646 /* LandmarksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFF797BE29FA408E00AEB646 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF263EED28CF4657005E4578 /* Landmarks */;
+			targetProxy = AFF797BD29FA408E00AEB646 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF263EFA28CF4658005E4578 /* Debug */ = {
@@ -387,6 +463,46 @@
 			};
 			name = Release;
 		};
+		AFF797BF29FA408E00AEB646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2857432TNY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shaivik.dhavjekar.srijan.net.LandmarksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Landmarks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Landmarks";
+			};
+			name = Debug;
+		};
+		AFF797C029FA408E00AEB646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2857432TNY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = shaivik.dhavjekar.srijan.net.LandmarksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Landmarks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Landmarks";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,6 +520,15 @@
 			buildConfigurations = (
 				AF263EFD28CF4658005E4578 /* Debug */,
 				AF263EFE28CF4658005E4578 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFF797C129FA408E00AEB646 /* Build configuration list for PBXNativeTarget "LandmarksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFF797BF29FA408E00AEB646 /* Debug */,
+				AFF797C029FA408E00AEB646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
