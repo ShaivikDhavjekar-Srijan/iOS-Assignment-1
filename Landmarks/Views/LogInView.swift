@@ -32,7 +32,7 @@ struct LogInView: View {
                 } else {
                         ZStack{
 
-                        Color.green.ignoresSafeArea()
+                        Color.blue.ignoresSafeArea()
                         VStack{
                             Text("Log In")
                                 .foregroundColor(.black)
