@@ -13,7 +13,10 @@ class StoreViewModel: ObservableObject {
     //    init() {}
     
     func loadProductData() async {
-        guard let storeUrl = URL(string: "https://fakestoreapi.com/products") else {
+        
+        let BASE_URL = "https://fakestoreapi.com/"
+        
+        guard let storeUrl = URL(string: "\(BASE_URL)products") else {
             print("Invalid URL")
             return
         }
