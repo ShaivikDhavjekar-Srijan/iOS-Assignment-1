@@ -31,7 +31,7 @@ final class LogInTest: XCTestCase {
         
         let model = LogInViewModel()
         
-        model.authenticateUser(username: "", password: "")
+        model.authenticateUser(username: "_shaivik123", password: "")
         
         XCTAssertEqual(model.wrongPassword, 3)
     }
