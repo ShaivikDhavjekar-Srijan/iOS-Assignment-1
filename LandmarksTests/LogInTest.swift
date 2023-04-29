@@ -35,5 +35,9 @@ final class LogInTest: XCTestCase {
         
         XCTAssertEqual(model.wrongPassword, 3)
     }
+    
+    func testItShouldShowLoggedInWhenLoggedIn() throws {
+        
+    }
 
 }
