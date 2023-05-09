@@ -21,12 +21,11 @@ struct ProductCard: View {
             .frame(width: 178.2178, height: 247.5248)
             
             VStack(alignment: .leading) {
-                NavigationLink(destination: ProductView(product: product)) {
-                    Text(product.title).bold().foregroundColor(.black)
-                }
+                Text(product.title).bold()
                 Text("$"+(String(format:"%.02f", product.price)))
                     .font(.caption)
             }
+            .foregroundColor(.black)
             .padding()
             .frame(width: 180, height:50 ,alignment: .leading)
             .background(.ultraThinMaterial)

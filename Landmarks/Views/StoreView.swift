@@ -13,6 +13,7 @@ struct StoreView: View {
 //    @ObservedObject private var settings = UserSettings()
     
     @State var isList: Bool = false
+    @State var filtered: Bool = false
     
     var columns = [GridItem(.adaptive(minimum: 160),spacing: 20)]
     
@@ -23,18 +24,21 @@ struct StoreView: View {
             ZStack{
                 if isList {
                     List(model.storeData, id: \.id) { product in
-                        HStack(alignment: .top) {
-                            AsyncImage(url: URL(string: product.image)) {
-                                image in image.resizable()
-                            } placeholder: {
-                            ProgressView()
-            
-                            }
-                            .frame(width:104, height: 150)
-                            VStack(alignment: .leading) {
-                                Text(product.title)
-                                    .font(.headline)
-                                Text("$\(product.price)")
+                        NavigationLink(destination: ProductView(product: product)) {
+                            HStack(alignment: .top) {
+                                AsyncImage(url: URL(string: product.image)) {
+                                    image in image.resizable().aspectRatio(contentMode: .fit)
+                                } placeholder: {
+                                ProgressView()
+                                }
+                                .frame(width:104, height: 150)
+                                VStack(alignment: .leading) {
+                                    Text(product.title)
+                                        .font(.callout)
+                                    Text("$"+(String(format:"%.02f", product.price)))
+                                        .fontWeight(.bold)
+                                        
+                                }
                             }
                         }
                     }
@@ -42,7 +46,10 @@ struct StoreView: View {
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
-                            ForEach(model.storeData, id: \.id) {product in ProductCard(product: product)
+                            ForEach(model.storeData, id: \.id) {product in
+                                NavigationLink(destination: ProductView(product: product)) {
+                                    ProductCard(product: product)
+                                }
                             }
                         }
                         .padding()
@@ -60,11 +67,27 @@ struct StoreView: View {
 //                        UserDefaults.standard.set(false,forKey: "LOG_IN_KEY")
 //                    }
 //                    .foregroundColor(.red)
-                    Button {
-                        isList.toggle()
-                    } label: {
-                        Text("ViewStyle")
+                    
+                    HStack {
+                        Button {
+                            filtered.toggle()
+                        } label: {
+                            Image("filters")
+                                .renderingMode(.template)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width:20, height:20)
+                        }
+                        Button {
+                            isList.toggle()
+                        } label: {
+                            Image(systemName: isList ? "tablecells" : "list.dash")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width:20, height:20)
+                        }
                     }
+                    .padding(.trailing, 5)
                 }
             }
             
