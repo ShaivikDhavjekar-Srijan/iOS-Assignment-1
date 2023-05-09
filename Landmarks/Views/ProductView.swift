@@ -34,12 +34,12 @@ struct ProductView: View {
                         .padding(.vertical,verticalPadding)
                     
                     HStack {
-                        Text((String(format:"%.02f", product.rating.rate))+"★")
+                        Text((String(format:"%.02f", product.rating.rate))+" ★")
                             .foregroundColor(.white)
                             .padding(.vertical,verticalPadding)
                             .padding(.horizontal,horizontalPadding)
                             .background(Color.green)
-                        Text("\(product.rating.count) ratings")
+                        Text(String(product.rating.count) + " ratings")
                             .foregroundColor(.gray)
                     }
                     .font(.system(size: 15, weight: .regular))
